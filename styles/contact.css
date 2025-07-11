@@ -25,3 +25,7 @@ height: 80px;
         background-color: #dcedc8        ;
     color: #2e7d32     ;
 }
+
+.left-text{
+    text-align: left;
+}
