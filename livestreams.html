@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
 
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/livestream.css">
     <title>Cedar Grove Christian - LiveStream</title>
     <link rel="icon" type="image/x-icon" href="/imgs/logo.png">
 
@@ -68,20 +69,28 @@
         </div>
       </nav>
 
+<div class="bg-wrapper">
+  <div class="overlay">
+    <div class="container text-center py-5">
+      <div class="ratio ratio-16x9 mb-4 video-wrapper">
+<div id="live-wrapper">
+  <!-- Toggle this to true when you're live -->
+  <script>
+    const isLive = false; // 👈 Change to true when streaming
+  </script>
 
-
-
-    <iframe
-  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FCedar-Grove-Christian-Church%2Flive"
-  width="700"
-  height="400"
-  style="border:none;overflow:hidden"
-  scrolling="no"
-  frameborder="0"
-  allowfullscreen="true"
-  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-</iframe>
+  <div id="live-container" class="ratio ratio-16x9">
+    <!-- Live iframe or fallback will go here -->
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
 
 </body>
-<script></script>
+<script src="livestream.js"></script>
 </html>
