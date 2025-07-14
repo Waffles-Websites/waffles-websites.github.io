@@ -29,3 +29,16 @@ height: 80px;
 .left-text{
     text-align: left;
 }
+
+#thank-you{
+ display: none;
+}
+
+#contact-form{
+    background-color: #dcedc8        ;
+    color: #2e7d32     ;
+}
+
+.hide{
+    display: none;
+}
