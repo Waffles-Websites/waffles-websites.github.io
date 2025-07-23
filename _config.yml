@@ -4,3 +4,4 @@ baseurl: ""
 url: "https://cedargrovechristian.com"
 markdown: kramdown
 theme: minima
+permalink: pretty
