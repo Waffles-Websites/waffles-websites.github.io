@@ -1,0 +1,6 @@
+title: Cedar Grove Christian Church
+description: A community of believers in Chuckey, TN.
+baseurl: ""
+url: "https://cedargrovechristian.com"
+markdown: kramdown
+theme: minima
