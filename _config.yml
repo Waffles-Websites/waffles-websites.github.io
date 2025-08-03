@@ -1,0 +1,6 @@
+title: Cedar Grove Christian Church
+description: Website for Cedar Grove Christian Church in Chuckey, TN.
+baseurl: "/waffles-websites.github.io"
+url: "https://waffles-websites.github.io"
+markdown: kramdown
+permalink: pretty
