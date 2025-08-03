@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #fff9f0; color: #432818; }
+    header, footer { background: #ffe8cc; padding: 1rem; text-align: center; }
+    nav ul { display: flex; list-style: none; justify-content: center; gap: 1rem; padding: 0; margin: 0; }
+    nav a { text-decoration: none; color: #7f5539; font-weight: bold; }
+    .content { padding: 2rem; max-width: 800px; margin: auto; }
+  </style>
+</head>
+<body>
+  {% include header.html %}
+  <main class="content">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>
