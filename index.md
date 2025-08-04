@@ -14,7 +14,7 @@ title: Home
       <div class="col-md-4">
         <i class="bi bi-geo-alt-fill display-5 text-primary"></i>
         <h5 class="section-title mt-3">Visit Us</h5>
-        <p>5270 Chuckey Pike, Chuckey, TN 37641</p>
+        <p>52701 Chuckey Pike, Chuckey, TN 37641</p>
       </div>
       <div class="col-md-4">
         <i class="bi bi-play-circle-fill display-5 text-primary"></i>
