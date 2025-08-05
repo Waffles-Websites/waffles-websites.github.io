@@ -34,6 +34,12 @@ footer {
   padding: 2rem 0;
 }
 
+.blockquote-footer {
+  background-color: transparent !important;
+  color: inherit;
+  font-style: italic;
+}
+
 
  
   
