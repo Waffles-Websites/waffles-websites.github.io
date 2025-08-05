@@ -10,16 +10,21 @@ body {
   padding: 80px 20px;
   text-align: center;
 }
-.page-header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+.page-header h1 { 
+  font-size: 2.5rem; 
+  font-weight: 700; 
 }
-.section-title {
-  font-weight: 600;
-  margin-bottom: 1rem;
+.section-title { 
+  font-weight: 600; 
+  margin-bottom: 1rem; 
 }
 footer {
   background: #1e293b;
   color: white;
   padding: 2rem 0;
 }
+
+
+ 
+  
+   
