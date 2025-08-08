@@ -1,6 +1,6 @@
 title: Cedar Grove Christian Church
 description: A Christ-centered church family in Limestone, TN.
-url: ''
+url: "https://waffles-websites.github.io"
 baseurl: ''
 markdown: kramdown
 permalink: pretty
@@ -22,3 +22,6 @@ author:
   name: Cedar Grove Christian Church
 timezone: America/New_York
 image: /assets/imgs/CGY.png
+# Livestream behavior for /watch
+live_active: false        # set to true only when you’re live
+live_embed_url: ""        # paste your YouTube/Facebook embed URL here when live
