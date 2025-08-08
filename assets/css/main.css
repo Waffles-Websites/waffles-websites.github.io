@@ -206,3 +206,16 @@ footer a:hover {
     font-size: 1rem;
   }
 }
+
+
+/* Force home card images to 16:9 crop */
+.card-soft picture > img,
+.card-soft > img,
+.card-media img {
+  width: 100% !important;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  height: auto; /* keep layout stable */
+}
+
