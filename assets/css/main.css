@@ -239,3 +239,70 @@ footer a:hover { text-decoration: underline; }
   color: #fff;
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
+
+
+/* ===== Footer polish ===== */
+footer.site-footer {
+  background: #111827;            /* deep slate */
+  color: #cfd8e3;                  /* soft gray text */
+  padding: 2.75rem 0;
+  border-top: 1px solid rgba(255,255,255,.06);
+  font-size: .95rem;
+}
+
+.site-footer a {
+  color: #e5e7eb;                  /* light link */
+  text-decoration: none;
+}
+.site-footer a:hover { 
+  color: #ffffff; 
+  text-decoration: underline; 
+}
+
+.site-footer .footer-heading {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: .75rem;
+}
+
+.site-footer .footer-muted {
+  color: #9aa6b2;                  /* muted copy */
+}
+
+.site-footer .footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer .footer-list li + li { margin-top: .35rem; }
+
+/* spacing between columns on mobile */
+@media (max-width: 767px) {
+  .site-footer .col { margin-bottom: 1.25rem; }
+}
+
+/* skinny credit bar */
+.footer-credit {
+  border-top: 1px solid rgba(255,255,255,.06);
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  color: #94a3b8;
+  font-size: .9rem;
+}
+
+/* optional: social icons look consistent */
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px; height: 38px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 10px;
+  margin-right: .5rem;
+}
+.footer-social a:hover {
+  border-color: rgba(255,255,255,.6);
+  background: rgba(255,255,255,.08);
+}
+
