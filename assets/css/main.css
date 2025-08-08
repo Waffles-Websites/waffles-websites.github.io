@@ -159,3 +159,23 @@ footer a:hover { text-decoration: underline; }
   .hero h1 { font-size: 2rem; }
   .hero p { font-size: 1rem; }
 }
+
+/* --- Section spacing & contrast --- */
+.section { 
+  padding: 3.5rem 0;            /* breathing room for every section */
+}
+
+.section-muted {                 /* use on alternating sections */
+  background: #f7f7fb;          /* subtle light gray (not gloomy) */
+}
+
+/* Give the first cards section extra space from the hero */
+.section.home-cards {
+  padding-top: 3.5rem;
+}
+
+/* Optional: subtle divider under the hero so it doesn't "bleed" */
+.hero { 
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
