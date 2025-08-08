@@ -35,35 +35,62 @@ nav_active: index
   <div class="container">
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="card-soft h-100">
-          <img src="{{ '/assets/imgs/messages.jpg' | relative_url }}" class="img-fluid" alt="Worship" loading="lazy" />
-          <div class="card-body">
-            <h4>Messages</h4>
-            <p class="mb-3 text-muted">Catch up on recent sermons or watch live on Sundays.</p>
-            <a class="btn btn-brand btn-sm" href="/sermons/">Watch</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-soft h-100">
-          <img src="{{ '/assets/imgs/church.jpg' | relative_url }}" class="img-fluid" alt="Community" loading="lazy" />
-          <div class="card-body">
-            <h4>Plan Your Visit</h4>
-            <p class="mb-3 text-muted">What to expect, when to arrive, and how to find your spot.</p>
-            <a class="btn btn-brand btn-sm" href="/plan-your-visit/">Start Here</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-soft h-100">
-          <img src="{{ '/assets/imgs/nextSteps.jpg' | relative_url }}" class="img-fluid" alt="Next steps" loading="lazy" />
-          <div class="card-body">
-            <h4>Next Steps</h4>
-            <p class="mb-3 text-muted">Small groups, serving, baptism, and ways to get connected.</p>
-            <a class="btn btn-brand btn-sm" href="/ministries/">Learn More</a>
-          </div>
-        </div>
-      </div>
+  <div class="card-soft h-100">
+    <div class="card-media">
+      <picture>
+        <source srcset="/assets/imgs/home/messages-800.webp 800w, /assets/imgs/home/messages-1600.webp 1600w" type="image/webp">
+        <source srcset="/assets/imgs/home/messages-800.jpg 800w, /assets/imgs/home/messages-1600.jpg 1600w" type="image/jpeg">
+        <img src="/assets/imgs/home/messages-800.jpg"
+             alt="Pastor preaching from the Bible to a welcoming congregation"
+             loading="lazy" width="1600" height="900">
+      </picture>
+    </div>
+    <div class="card-body">
+      <h4>Messages</h4>
+      <p class="mb-3 text-muted">Catch up on recent sermons or watch live on Sundays.</p>
+      <a class="btn btn-brand btn-sm" href="/sermons/">Watch</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="card-soft h-100">
+    <div class="card-media">
+      <picture>
+        <source srcset="/assets/imgs/home/plan-800.webp 800w, /assets/imgs/home/plan-1600.webp 1600w" type="image/webp">
+        <source srcset="/assets/imgs/home/plan-800.jpg 800w, /assets/imgs/home/plan-1600.jpg 1600w" type="image/jpeg">
+        <img src="/assets/imgs/home/plan-800.jpg"
+             alt="Smiling greeters welcoming people at the church entrance"
+             loading="lazy" width="1600" height="900">
+      </picture>
+    </div>
+    <div class="card-body">
+      <h4>Plan Your Visit</h4>
+      <p class="mb-3 text-muted">What to expect, when to arrive, and how to find your spot.</p>
+      <a class="btn btn-brand btn-sm" href="/plan-your-visit/">Start Here</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="card-soft h-100">
+    <div class="card-media">
+      <picture>
+        <source srcset="/assets/imgs/home/next-800.webp 800w, /assets/imgs/home/next-1600.webp 1600w" type="image/webp">
+        <source srcset="/assets/imgs/home/next-800.jpg 800w, /assets/imgs/home/next-1600.jpg 1600w" type="image/jpeg">
+        <img src="/assets/imgs/home/next-800.jpg"
+             alt="Small group gathered around a table with Bibles open"
+             loading="lazy" width="1600" height="900">
+      </picture>
+    </div>
+    <div class="card-body">
+      <h4>Next Steps</h4>
+      <p class="mb-3 text-muted">Small groups, serving, baptism, and ways to get connected.</p>
+      <a class="btn btn-brand btn-sm" href="/ministries/">Learn More</a>
+    </div>
+  </div>
+</div>
+
     </div>
   </div>
 </section>
