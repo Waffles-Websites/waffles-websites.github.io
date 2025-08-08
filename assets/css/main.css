@@ -175,7 +175,9 @@ footer a:hover { text-decoration: underline; }
 }
 
 .hero {
-  background: linear-gradient(135deg, #1f2a44 0%, #2f4a83 100%);
+  background:
+    radial-gradient(1000px 500px at 10% -10%, rgba(13,110,253,.12), transparent),
+    radial-gradient(800px 400px at 90% 10%, rgba(32,201,151,.10), transparent);
   color: #fff;
 }
 
