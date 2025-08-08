@@ -189,3 +189,29 @@ footer a:hover {
   transform: translateY(-4px); 
   box-shadow: 0 10px 24px rgba(0,0,0,.12);
 }
+
+
+
+
+/* FINAL: Only crop the three homepage cards */
+.section.home-cards .card-media picture,
+.section.home-cards .card-media img {
+  display: block;
+  width: 100%;
+}
+
+.section.home-cards .card-media picture > img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  height: auto;
+}
+
+/* Safety: never crop hero/nav images */
+.navbar img,
+header img,
+.hero img {
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  height: auto !important;
+}
+
