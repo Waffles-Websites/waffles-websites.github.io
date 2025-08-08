@@ -214,7 +214,8 @@ footer a:hover {
   overflow: hidden;
   border-radius: var(--radius, 8px) var(--radius, 8px) 0 0;
 }
-.home-cards .card-media img {
+.home-cards .card-media img,
+.home-cards .card-media picture > img {
   width: 100%;
   display: block;
   aspect-ratio: 16 / 9;
