@@ -174,8 +174,7 @@ footer a:hover { text-decoration: underline; }
   padding-top: 3.5rem;
 }
 
-/* Optional: subtle divider under the hero so it doesn't "bleed" */
-.hero { 
-  border-bottom: 1px solid rgba(0,0,0,.06);
+.hero {
+  background: linear-gradient(135deg, #1f2a44 0%, #2f4a83 100%);
+  color: #fff;
 }
-
