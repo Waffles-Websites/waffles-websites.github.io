@@ -1,128 +1,208 @@
+/* =====================================================
+   MAIN SITE STYLES – Updated for Card Image Improvements
+   ===================================================== */
 
-body { font-family: 'Inter', sans-serif; }
-h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', serif; }
-
-/* === Design System (inspired by Life.Church, Elevation, North Point, Austin Stone) === */
-:root{
-  --brand: #0d6efd;           /* primary accent (blues common on top church sites) */
-  --brand-2: #20c997;         /* secondary accent (teal/green) */
-  --ink: #1f2937;             /* near-black */
-  --muted: #6b7280;           /* gray-500 */
-  --bg: #f8fafc;              /* slate-50 */
-  --card: #ffffff;
-  --radius: 1.25rem;
-  --shadow: 0 10px 30px rgba(2,8,20,.06);
+/* Reset & Base */
+html {
+  box-sizing: border-box;
 }
-
-html { scroll-behavior: smooth; }
-
-body{
-  color: var(--ink);
-  background: var(--bg);
-  font-feature-settings: "liga" 1, "kern" 1;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #333;
+  margin: 0;
   line-height: 1.6;
+  background-color: #fff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Typography scale reminiscent of bold hero headings + generous spacing */
-h1, .display-1{ font-weight: 800; letter-spacing: -0.02em; }
-h1{ font-size: clamp(2.2rem, 3.5vw + 1rem, 3.5rem); }
-h2{ font-weight: 700; font-size: clamp(1.6rem, 2vw + 1rem, 2.25rem); }
-h3{ font-weight: 700; font-size: 1.5rem; }
-.lead{ font-size: clamp(1.05rem, .6vw + 1rem, 1.25rem); color: var(--muted); }
-
-/* Navbar refinements */
-.navbar { --bs-navbar-padding-y: .8rem; }
-.navbar .nav-link{ font-weight: 600; opacity: .9; }
-.navbar .nav-link.active{ color: var(--brand) !important; }
-.navbar .nav-link:hover{ opacity: 1; }
-
-/* Buttons (pill, bold) */
-.btn-brand{ background: var(--brand); border-color: var(--brand); color: #fff; border-radius: 999px; padding: .65rem 1.1rem; font-weight: 700; }
-.btn-brand:hover{ filter: brightness(.95); color: #fff; }
-.btn-ghost{ border-radius: 999px; padding: .65rem 1.1rem; font-weight: 700; border: 2px solid rgba(0,0,0,.1); color: var(--ink); }
-.btn-ghost:hover{ border-color: rgba(0,0,0,.2); }
-
-/* Hero with soft gradient + image overlay option */
-.hero{
-  position: relative;
-  padding: clamp(3rem, 6vw, 6rem) 0;
-  background:
-    radial-gradient(1000px 500px at 10% -10%, rgba(13,110,253,.12), transparent),
-    radial-gradient(800px 400px at 90% 10%, rgba(32,201,151,.10), transparent);
+/* Links */
+a {
+  color: #0056b3;
+  text-decoration: none;
 }
-.hero .hero-card{
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: clamp(1rem, 2vw, 1.5rem);
+a:hover {
+  text-decoration: underline;
 }
 
-/* Section spacing + dividers commonly used on top church sites */
-.section{ padding: clamp(2.5rem, 6vw, 5rem) 0; }
-.section-muted{ background: #fff; }
-.section-alt{ background: linear-gradient(180deg, #fff 0%, var(--bg) 100%); }
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
 
-/* Cards grid (rounded, shadow, hover) */
-.card-soft{
-  border: none;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+/* Layout helpers */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.navbar a {
+  color: #333;
+  padding: 0.75rem 1rem;
+  display: block;
+}
+.navbar a:hover {
+  background: #f8f8f8;
+}
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
+.hero {
+  background: #222;
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   CARD COMPONENTS – UPDATED
+   ===================================================== */
+.card-soft {
+  background: #fff;
+  border-radius: 8px;
   overflow: hidden;
-  background: var(--card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.card-soft .card-body{ padding: 1.25rem; }
-.card-soft:hover{ transform: translateY(-2px); transition: transform .2s ease; }
+.card-soft:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
 
-/* Image treatment */
-.img-cover{ width: 100%; height: 100%; object-fit: cover; }
-.rounded-2xl{ border-radius: var(--radius); }
-
-/* Aspect ratio utilities for sermon/video embeds */
-.ratio-16x9{ position: relative; padding-top: 56.25%; }
-.ratio-16x9 > iframe, .ratio-16x9 > video{ position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: var(--radius); }
-
-/* Footer */
-footer{ background: #fff; }
-footer .small{ color: var(--muted); }
-
-/* Utilities */
-.badge-soft{ background: rgba(13,110,253,.12); color: var(--brand); border-radius: 999px; padding: .35rem .6rem; font-weight: 700; font-size: .8rem; }
-.shadow-soft{ box-shadow: var(--shadow); }
-.max-w-2xl{ max-width: 48rem; }
-.max-w-3xl{ max-width: 64rem; }
-.mx-auto{ margin-left: auto; margin-right: auto; }
-
-
-
-/* Focus styles for accessibility */
-:focus-visible { outline: 3px solid rgba(13,110,253,.5); outline-offset: 2px; }
-
-/* Link underline on hover for clarity */
-a:hover { text-decoration: underline; }
-
-/* Footer link style */
-footer a { color: inherit; }
-footer a:hover { color: var(--brand); }
-
-/* --- Card media polish --- */
-.card-soft { transition: transform .2s, box-shadow .2s; }
-.card-soft:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(0,0,0,.08); }
-
-/* Media wrapper with subtle gradient overlay (improves title contrast) */
+/* Card Media Wrapper */
 .card-media {
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius) var(--radius) 0 0;
 }
+.card-media img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay gradient for image contrast */
 .card-media::after {
   content: "";
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.25));
-  opacity: .85; transition: opacity .2s ease;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 100%);
+  pointer-events: none;
 }
-.card-soft:hover .card-media::after { opacity: 1; }
 
-.card-media { position: relative; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; }
-.card-media img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; }
+/* Card body */
+.card-body {
+  padding: 1.25rem;
+  flex: 1 1 auto;
+}
+.card-body h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.card-body p {
+  margin-bottom: 1rem;
+  color: #555;
+}
 
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+.btn-brand {
+  background: #0056b3;
+  color: #fff;
+}
+.btn-brand:hover {
+  background: #004494;
+  color: #fff;
+}
 
+/* =====================================================
+   FOOTER
+   ===================================================== */
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+   UTILITIES
+   ===================================================== */
+.text-muted {
+  color: #6c757d !important;
+}
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
