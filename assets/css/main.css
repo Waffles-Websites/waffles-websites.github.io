@@ -208,26 +208,24 @@ footer a:hover {
 }
 
 
-/* Force home card images to 16:9 crop */
-.card-soft picture > img,
-.card-soft > img,
-.card-media img {
-  width: 100% !important;
+/* Scoped: only the 3 homepage cards */
+.home-cards .card-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius, 8px) var(--radius, 8px) 0 0;
+}
+.home-cards .card-media img {
+  width: 100%;
   display: block;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  height: auto; /* keep layout stable */
-}
-/* Force home card images to a uniform 16:9 crop */
-.card-media picture,
-.card-media img {
-  display: block;
-  width: 100% !important;
 }
 
-.card-media picture > img {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  height: auto;
+/* Optional: subtle hover polish stays scoped to those cards */
+.home-cards .card-soft { 
+  transition: transform .2s, box-shadow .2s; 
 }
-
+.home-cards .card-soft:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
