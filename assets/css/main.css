@@ -103,3 +103,25 @@ a:hover { text-decoration: underline; }
 /* Footer link style */
 footer a { color: inherit; }
 footer a:hover { color: var(--brand); }
+
+/* --- Card media polish --- */
+.card-soft { transition: transform .2s, box-shadow .2s; }
+.card-soft:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(0,0,0,.08); }
+
+/* Media wrapper with subtle gradient overlay (improves title contrast) */
+.card-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.card-media::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.25));
+  opacity: .85; transition: opacity .2s ease;
+}
+.card-soft:hover .card-media::after { opacity: 1; }
+
+/* Consistent 16:9 crop for all card images */
+.card-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+
