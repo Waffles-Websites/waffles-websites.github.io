@@ -1,35 +1,32 @@
-<footer class="py-5 mt-5 bg-white border-top site-footer">
+<footer class="site-footer">
   <div class="container">
     <div class="row g-4">
-      <div class="col-md-5">
-        <h5 class="fw-bold mb-3 footer-heading">{{ site.title }}</h5>
-        <p class="small text-muted mb-1 footer-muted">Sundays: Worship 9:30 AM • Sunday School 10:30 AM</p>
-        <p class="small text-muted mb-2">
-          <a class="text-decoration-none" href="https://maps.google.com/?q={{ site.address | uri_escape }}">{{ site.address }}</a>
-        </p>
-        <div class="d-flex gap-2">
-          <a class="btn btn-brand btn-sm hero-btn" href="/livestreams.html">Watch Online</a>
-          <a class="btn btn-ghost btn-sm hero-btn" href="/plan-your-visit.html">Plan Your Visit</a>
+      <div class="col-12 col-md-4 col">
+        <h6 class="footer-heading">Visit</h6>
+        <p class="footer-muted mb-2">5270 Chuckey Pike, Chuckey, TN</p>
+        <a href="https://maps.google.com/?q=5270+Chuckey+Pike,+Chuckey,+TN+37641">Get Directions</a>
+      </div>
+      <div class="col-12 col-md-4 col">
+        <h6 class="footer-heading">Gatherings</h6>
+        <ul class="footer-list">
+          <li>Sunday Worship — 9:30 AM</li>
+          <li>Sunday School — 10:30 AM</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-4 col">
+        <h6 class="footer-heading">Connect</h6>
+        <div class="footer-social">
+          <!-- swap with real links -->
+          <a href="#" aria-label="Facebook">F</a>
+          <a href="#" aria-label="YouTube">Y</a>
+          <a href="/contact/">Contact</a>
         </div>
       </div>
-      <div class="col-md-4">
-        <h6 class="fw-bold mb-3 footer-heading">Quick Links</h6>
-        <ul class="list-unstyled small footer-muted">
-          <li><a class="text-decoration-none" href="/sermons/">Sermons</a></li>
-          <li><a class="text-decoration-none" href="/events/">Events</a></li>
-          <li><a class="text-decoration-none" href="/about.html">About</a></li>
-          <li><a class="text-decoration-none" href="/beliefs.html">Beliefs</a></li>
-          <li><a class="text-decoration-none" href="/contact.html">Contact</a></li>
-          <li><a class="text-decoration-none" href="/give.html">Give</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h6 class="fw-bold mb-3 footer-heading">Stay Connected</h6>
-        <ul class="list-unstyled small text-muted mb-2 footer-muted">
-          <li>Facebook • YouTube (links coming)</li>
-        </ul>
-        <div class="small text-muted">&copy; {{ site.time | date: '%Y' }} {{ site.title }}</div>
-      </div>
+    </div>
+
+    <div class="footer-credit d-flex flex-wrap justify-content-between">
+      <span>© {{ "now" | date: "%Y" }} Cedar Grove Christian Church</span>
+      <span><a href="/beliefs/">Beliefs</a> · <a href="/plan-your-visit/">Plan Your Visit</a></span>
     </div>
   </div>
 </footer>
