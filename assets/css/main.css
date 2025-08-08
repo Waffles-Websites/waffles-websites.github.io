@@ -218,4 +218,16 @@ footer a:hover {
   object-fit: cover;
   height: auto; /* keep layout stable */
 }
+/* Force home card images to a uniform 16:9 crop */
+.card-media picture,
+.card-media img {
+  display: block;
+  width: 100% !important;
+}
+
+.card-media picture > img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  height: auto;
+}
 
