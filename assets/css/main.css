@@ -194,3 +194,46 @@ footer a:hover { text-decoration: underline; }
 .quick-info a:hover {
   text-decoration: underline;
 }
+
+
+/* Hero buttons: consistent sizing, spacing, contrast */
+.hero-cta .btn { 
+  padding: .7rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* Give both buttons a similar visual weight */
+.hero-btn { min-width: 190px; }
+
+/* Solid primary */
+.btn-brand {
+  background: #2f5ae0; 
+  color: #fff;
+  border: 1px solid #2a51ca;
+}
+.btn-brand:hover { background: #264ac0; color: #fff; }
+
+/* Ghost/outline secondary that actually looks intentional on dark hero */
+.btn-ghost {
+  background: transparent;
+  color: #e9ecff;
+  border: 1px solid rgba(233,236,255,.55);
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  border-color: rgba(233,236,255,.85);
+}
+
+/* Desktop: align left if you prefer (keep centered on mobile) */
+@media (min-width: 992px) {
+  .hero-cta { justify-content: flex-start; }
+}
+
+/* Optional: give the hero a softer look so buttons pop */
+.hero {
+  background: linear-gradient(135deg, #1f2a44 0%, #2f4a83 100%);
+  color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
