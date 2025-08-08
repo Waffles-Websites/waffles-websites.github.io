@@ -1,0 +1,24 @@
+title: Cedar Grove Christian Church
+description: A Christ-centered church family in Limestone, TN.
+url: ''
+baseurl: ''
+markdown: kramdown
+permalink: pretty
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-sitemap
+address: 5270 Chuckey Pike, Chuckey, TN 37641
+collections:
+  sermons:
+    output: true
+    permalink: /sermons/:name/
+  events:
+    output: true
+    permalink: /events/:name/
+social:
+  name: Cedar Grove Christian Church
+author:
+  name: Cedar Grove Christian Church
+timezone: America/New_York
+image: /assets/imgs/CGY.png

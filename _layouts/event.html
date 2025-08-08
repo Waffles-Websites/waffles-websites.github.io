@@ -1,0 +1,19 @@
+---
+---
+<section class="section">
+  <div class="container max-w-3xl mx-auto">
+    <p><a href="{{ '/events/' | relative_url }}" class="text-decoration-none">&larr; All Events</a></p>
+    <h1 class="mb-2">{{ page.title }}</h1>
+    <p class="text-muted mb-4">
+      {% if page.date %}{{ page.date | date: "%A, %B %d, %Y" }}{% endif %}
+      {% if page.time %} • {{ page.time }}{% endif %}
+      {% if page.location %} • {{ page.location }}{% endif %}
+    </p>
+    <div class="content">
+      {{ content }}
+    </div>
+    {% if page.register_url %}
+    <a class="btn btn-brand mt-3" href="{{ page.register_url }}" target="_blank" rel="noopener">Register</a>
+    {% endif %}
+  </div>
+</section>

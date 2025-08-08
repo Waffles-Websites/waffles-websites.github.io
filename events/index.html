@@ -1,0 +1,52 @@
+---
+layout: default
+title: "Events"
+nav_active: events
+---
+<section class="section">
+  <div class="container">
+    <h1 class="mb-4">Events</h1>
+
+    <h3 class="mt-4 mb-3">Upcoming Events</h3>
+    <div class="row g-4">
+      {% assign now = site.time %}
+      {% assign items = site.events | sort: 'date' %}
+      {% for e in items %}
+        {% if e.date >= now %}
+        <div class="col-md-6 col-lg-4">
+          <a href="{{ e.url | relative_url }}" class="text-decoration-none">
+            <div class="card-soft h-100">
+              <div class="card-body">
+                <div class="small text-muted">{{ e.date | date: "%b %d, %Y" }}{% if e.time %} • {{ e.time }}{% endif %}</div>
+                <h4 class="mt-1">{{ e.title }}</h4>
+                {% if e.location %}<div class="text-muted">{{ e.location }}</div>{% endif %}
+                {% if e.excerpt %}<p class="mt-2 text-muted">{{ e.excerpt | strip_html | truncate: 120 }}</p>{% endif %}
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <h3 class="mt-5 mb-3">Past Events</h3>
+    <div class="row g-4">
+      {% assign items = site.events | sort: 'date' | reverse %}
+      {% for e in items %}
+        {% if e.date < site.time %}
+        <div class="col-md-6 col-lg-4">
+          <a href="{{ e.url | relative_url }}" class="text-decoration-none">
+            <div class="card-soft h-100">
+              <div class="card-body">
+                <div class="small text-muted">{{ e.date | date: "%b %d, %Y" }}{% if e.time %} • {{ e.time }}{% endif %}</div>
+                <h4 class="mt-1">{{ e.title }}</h4>
+                {% if e.location %}<div class="text-muted">{{ e.location }}</div>{% endif %}
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

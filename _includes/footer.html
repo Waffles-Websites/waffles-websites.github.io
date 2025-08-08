@@ -1,0 +1,35 @@
+<footer class="py-5 mt-5 bg-white border-top">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-5">
+        <h5 class="fw-bold mb-3">{{ site.title }}</h5>
+        <p class="small text-muted mb-1">Sundays: Worship 9:30 AM • Sunday School 10:30 AM</p>
+        <p class="small text-muted mb-2">
+          <a class="text-decoration-none" href="https://maps.google.com/?q={{ site.address | uri_escape }}">{{ site.address }}</a>
+        </p>
+        <div class="d-flex gap-2">
+          <a class="btn btn-brand btn-sm" href="/livestreams.html">Watch Online</a>
+          <a class="btn btn-ghost btn-sm" href="/plan-your-visit.html">Plan Your Visit</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a class="text-decoration-none" href="/sermons/">Sermons</a></li>
+          <li><a class="text-decoration-none" href="/events/">Events</a></li>
+          <li><a class="text-decoration-none" href="/about.html">About</a></li>
+          <li><a class="text-decoration-none" href="/beliefs.html">Beliefs</a></li>
+          <li><a class="text-decoration-none" href="/contact.html">Contact</a></li>
+          <li><a class="text-decoration-none" href="/give.html">Give</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bold mb-3">Stay Connected</h6>
+        <ul class="list-unstyled small text-muted mb-2">
+          <li>Facebook • YouTube (links coming)</li>
+        </ul>
+        <div class="small text-muted">&copy; {{ site.time | date: '%Y' }} {{ site.title }}</div>
+      </div>
+    </div>
+  </div>
+</footer>

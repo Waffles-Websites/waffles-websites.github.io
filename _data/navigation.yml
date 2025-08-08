@@ -1,0 +1,27 @@
+- key: index
+  name: Home
+  url: /
+- key: sermons
+  name: Sermons
+  url: /sermons/
+- key: watch
+  name: Watch
+  url: /watch/
+- key: events
+  name: Events
+  url: /events/
+- key: plan
+  name: Plan Your Visit
+  url: /plan-your-visit/
+- key: give
+  name: Give
+  url: /giving/
+- key: about
+  name: About
+  url: /about/
+- key: beliefs
+  name: Beliefs
+  url: /beliefs/
+- key: contact
+  name: Contact
+  url: /contact/
