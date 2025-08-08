@@ -240,8 +240,7 @@ footer a:hover { text-decoration: underline; }
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
 
-
-/* ===== Footer polish ===== */
+/* ===== Footer Polish ===== */
 footer.site-footer {
   background: #111827;            /* deep slate */
   color: #cfd8e3;                  /* soft gray text */
@@ -300,6 +299,7 @@ footer.site-footer {
   border: 1px solid rgba(255,255,255,.25);
   border-radius: 10px;
   margin-right: .5rem;
+  font-size: 1.1rem;
 }
 .footer-social a:hover {
   border-color: rgba(255,255,255,.6);
