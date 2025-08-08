@@ -1,0 +1,33 @@
+---
+layout: default
+title: "Sermons"
+nav_active: sermons
+---
+<section class="section">
+  <div class="container">
+    <h1 class="mb-4">Sermons</h1>
+    <div class="row g-4">
+      {% assign sorted = site.sermons | sort: 'date' | reverse %}
+      {% for s in sorted %}
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ s.url | relative_url }}" class="text-decoration-none">
+          <div class="card-soft h-100">
+            <div class="ratio-16x9">
+              {% if s.thumbnail %}
+                <img class="img-cover" src="{{ s.thumbnail | relative_url }}" alt="{{ s.title }}">
+              {% else %}
+                <iframe src="{{ s.video_url }}" loading="lazy"></iframe>
+              {% endif %}
+            </div>
+            <div class="card-body">
+              <div class="small text-muted">{{ s.date | date: "%b %d, %Y" }}{% if s.speaker %} • {{ s.speaker }}{% endif %}</div>
+              <h4 class="mt-1">{{ s.title }}</h4>
+              {% if s.passage %}<div class="text-muted">{{ s.passage }}</div>{% endif %}
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

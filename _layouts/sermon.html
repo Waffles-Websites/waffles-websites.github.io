@@ -1,0 +1,18 @@
+---
+---
+{% assign v = page.video_url %}
+<section class="section">
+  <div class="container max-w-3xl mx-auto">
+    <p><a href="{{ '/sermons/' | relative_url }}" class="text-decoration-none">&larr; All Sermons</a></p>
+    <h1 class="mb-2">{{ page.title }}</h1>
+    <p class="text-muted mb-4">{{ page.date | date: "%B %d, %Y" }}{% if page.speaker %} • {{ page.speaker }}{% endif %}{% if page.passage %} • {{ page.passage }}{% endif %}</p>
+    {% if v %}
+    <div class="ratio-16x9 shadow-soft mb-4">
+      <iframe src="{{ v }}" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+    </div>
+    {% endif %}
+    <div class="content">
+      {{ content }}
+    </div>
+  </div>
+</section>
