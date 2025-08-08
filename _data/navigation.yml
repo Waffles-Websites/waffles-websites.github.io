@@ -13,15 +13,18 @@
 - key: plan
   name: Plan Your Visit
   url: /plan-your-visit/
-- key: give
-  name: Give
-  url: /giving/
+- key: ministries
+  name: Ministries
+  url: /ministries/
 - key: about
   name: About
   url: /about/
 - key: beliefs
   name: Beliefs
   url: /beliefs/
+- key: give
+  name: Give
+  url: /give/
 - key: contact
   name: Contact
   url: /contact/
