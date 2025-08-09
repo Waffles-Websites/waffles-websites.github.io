@@ -484,3 +484,41 @@ a:hover {
   object-fit: contain !important;
   display: inline-block;
 }
+
+/* === HERO BUTTONS — FORCED OVERRIDES === */
+/* Accent color: pick one — example uses warm orange */
+/* If you want to keep blue instead, change the hexes here */
+:root {
+  --accent: #ff8c00;     /* solid */
+  --accent-hover: #ff7a00;
+  --accent-contrast: #ffffff;
+  --accent-border: #ff8c00;
+}
+
+/* same min-width + spacing */
+.hero .hero-btn { min-width: 160px; padding: 0.65rem 1.1rem; font-weight: 600; }
+
+/* solid accent */
+.hero .btn-accent {
+  background-color: var(--accent) !important;
+  color: var(--accent-contrast) !important;
+  border: 2px solid var(--accent-border) !important;
+}
+.hero .btn-accent:hover {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+}
+
+/* outline accent */
+.hero .btn-outline-accent {
+  background-color: transparent !important;
+  color: var(--accent) !important;
+  border: 2px solid var(--accent-border) !important;
+}
+.hero .btn-outline-accent:hover {
+  background-color: var(--accent) !important;
+  color: var(--accent-contrast) !important;
+}
+
+/* extra breathing room between buttons */
+.hero .d-flex.gap-2, .hero .hero-cta { gap: 1rem !important; }
