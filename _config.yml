@@ -1,0 +1,39 @@
+title: Cedar Grove Christian
+description: A warm, welcoming country church where everyone is invited and God comes first.
+timezone: America/New_York
+url: ""  # Set your repository Pages URL if using a custom domain later
+baseurl: ""  # e.g. /repo-name if not using a user/organization site
+permalink: pretty
+markdown: kramdown
+kramdown:
+  input: GFM
+sass:
+  style: compressed
+collections:
+  posts:
+    output: true
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: "index.md"
+    values:
+      layout: home
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+  - package.json
+  - package-lock.json
+
+# Site data used in templates
+service_times:
+  sunday_service: "9:30 AM"
+  sunday_school: "10:30 AM"
+  wednesday_bible_study: "6:30 PM"
+
+address: "5270 Chuckey Pike, Chuckey, TN 37641"
+email: "info@example.com"
+phone: "(555) 555-5555"

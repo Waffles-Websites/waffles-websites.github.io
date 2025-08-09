@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img class="brand-icon" src="{{ '/assets/img/cross.svg' | relative_url }}" alt="" aria-hidden="true">
+      <span class="brand-text">{{ site.title }}</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu" class="menu">
+        {% for item in site.data.navigation %}
+          <li><a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+  // Accessible nav toggle
+  const btn = document.currentScript.previousElementSibling.querySelector('.nav-toggle');
+  const menu = document.currentScript.previousElementSibling.querySelector('#menu');
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    menu.classList.toggle('open');
+  });
+</script>
