@@ -613,7 +613,27 @@ a:hover {
   transition: all 0.2s ease;
 }
 
-/* Solid yellow button */
+/* ===== HERO BUTTONS — Teal Style ===== */
+:root {
+  --accent: #20b2aa;          /* teal */
+  --accent-hover: #1b9a94;    /* darker teal for hover */
+  --accent-contrast: #ffffff; /* white text */
+  --accent-border: var(--accent);
+}
+
+/* Consistent sizing & shape */
+.hero .hero-cta { gap: 1rem !important; }
+.hero .hero-btn {
+  min-width: 160px;
+  padding: 0.65rem 1.2rem;
+  font-weight: 700;
+  border-radius: 12px; /* softer corners */
+  font-size: 1.05rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+}
+
+/* Solid teal button */
 .hero .btn-accent {
   background: var(--accent) !important;
   color: var(--accent-contrast) !important;
