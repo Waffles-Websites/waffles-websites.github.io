@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.2; }
 }
 .navbar a {
   color: #333;
-  padding: 0.75rem 1rem 6rem;
+  padding: 0.75rem 1rem ;
   display: block;
 }
 .navbar a:hover { background: #f8f8f8; }
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.2; }
 .hero {
   /*background: #222;*/
   color: #fff;
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 6rem;
   text-align: center;
 }
 .hero h1 { font-size: 2.5rem; }
