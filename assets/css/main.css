@@ -104,7 +104,7 @@ img{max-width:100%; display:block}
 /* Social Icons in Footer */
 .social-icons {
   display: flex;
-  gap: 0.8rem;
+  gap: 1.25rem;
   margin-top: 0.8rem;
 }
 
