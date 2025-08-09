@@ -5,16 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
+ 
+<!-- Favicon -->
 <link rel="icon" type="image/png" href="/assets/imgs/logo.png">
+
    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/assets/imgs/logo.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/imgs/logo.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/logo.png">-->
 
    <title>
-  <img src="/assets/imgs/logo.png" alt="" style=">
+  <img src="/assets/imgs/logo.png" alt="" style="display:none;">
   Cedar Grove Christian{% if page.title %} – {{ page.title }}{% endif %}
 </title>
+
     {% seo %}
     <meta name="description" content="{{ page.description | default: site.description }}">
     <link rel="icon" href="{{ '/assets/imgs/favicon.ico' | relative_url }}">
