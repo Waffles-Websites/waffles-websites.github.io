@@ -459,4 +459,26 @@ a:hover {
   text-decoration: none; /* or change to underline if you want */
 }
 
+.hero .d-flex.gap-2 {
+  gap: 1rem; /* increases space between buttons */
+}
+
+.hero .btn {
+  min-width: 160px; /* keeps widths even */
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+}
+
+.hero .btn-ghost {
+  border: 2px solid #0056b3; /* matches brand blue */
+  color: #0056b3;
+  background: transparent;
+}
+
+.hero .btn-ghost:hover {
+  background: #0056b3;
+  color: #fff;
+}
+
+
 
