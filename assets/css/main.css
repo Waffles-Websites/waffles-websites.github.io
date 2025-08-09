@@ -409,8 +409,8 @@ footer.site-footer {
 .site-nav .navbar-brand img,
 .site-nav .navbar-brand .nav-logo,
 .site-nav .navbar-brand img.img-fluid {
-  height: 18px !important;
-  max-height: 18px !important;
+  height: 50px !important;
+  max-height: 50px !important;
   width: auto !important;
   object-fit: contain !important;
   display: inline-block;
