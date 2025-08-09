@@ -633,3 +633,64 @@ a:hover {
   box-shadow: 0 3px 5px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
 }
 
+
+:root {
+  /* Brand palette from shiny orange-red button */
+  --brand-light: #ffb347; /* top gradient */
+  --brand-dark:  #ff8008; /* bottom gradient */
+  --brand-text:  #ffffff;
+  --brand-hover-light: #ff9e2b;
+  --brand-hover-dark:  #e86b00;
+}
+
+
+.btn-brand, .btn-primary {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--brand-text);
+  background: linear-gradient(180deg, var(--brand-light) 0%, var(--brand-dark) 100%);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-brand::before, .btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.5), transparent);
+  pointer-events: none;
+}
+
+.btn-brand:hover, .btn-primary:hover {
+  background: linear-gradient(180deg, var(--brand-hover-light) 0%, var(--brand-hover-dark) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.btn-brand:active, .btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--brand-dark);
+  border-bottom: 2px solid var(--brand-dark);
+}
+
+a { color: var(--brand-dark); }
+a:hover { color: var(--brand-hover-dark); }
+
+
+footer a { color: var(--brand-light); }
+footer a:hover { color: var(--brand-text); }
