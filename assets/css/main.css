@@ -458,17 +458,19 @@ a:hover {
   min-width: 160px; /* keeps widths even */
   padding: 0.6rem 1rem;
   font-size: 1rem;
+   background-color: #FF8C00;   /* solid orange on hover or primary button */
+  color: #fff !important;
 }
 
 .hero .btn-ghost {
-  border: 2px solid #0056b3; /* matches brand blue */
-  color: #0056b3;
+  border: 2px solid #FF8C00;   /* orange outline */
+  color: #FF8C00;
   background: transparent;
 }
 
 .hero .btn-ghost:hover {
-  background: #0056b3;
-  color: #fff;
+ background-color: #FF8C00;   /* solid orange on hover or primary button */
+  color: #fff !important;
 }
 
 
