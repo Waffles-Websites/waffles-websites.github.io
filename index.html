@@ -112,6 +112,35 @@ nav_active: index
   </div>
 </section>
 
+
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end mb-3">
+      <h2 class="mb-0">Upcoming Events</h2>
+      <a class="btn btn-ghost btn-sm" href="/events/">All Events</a>
+    </div>
+    <div class="row g-4">
+      {% assign next_events = site.events | sort: "date" | slice: 0, 3 %}
+      {% for event in next_events %}
+      <div class="col-md-4">
+        <div class="card-soft h-100">
+          <div class="card-body">
+            <h4>{{ event.title }}</h4>
+            <p class="text-muted">{{ event.date | date: "%B %d, %Y" }}</p>
+            <p>{{ event.description | truncate: 100 }}</p>
+            <a class="btn btn-brand btn-sm" href="{{ event.url }}">Details</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+
 <section class="section section-muted">
   <div class="container">
     <div class="d-flex justify-content-between align-items-end mb-3">
