@@ -419,26 +419,53 @@ footer.site-footer {
 
 /* =====================================================
    NAVBAR POLISH
-   ===================================================== */
+   =====================================================*/
 
-/* Make nav links slightly larger and bolder */
+/* Make nav links slightly larger and bolder 
 .navbar-nav .nav-link {
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.2s ease, border-color 0.2s ease;
   border-bottom: 2px solid transparent;
   padding-bottom: 0.25rem;
-}
+}*/
 
-/* Hover state: brand blue underline and color */
+/* Hover state: brand blue underline and color 
 .navbar-nav .nav-link:hover {
   color: #0056b3;
   border-bottom-color: #0056b3;
-}
+}*/
 
-/* Active state: keep underline and color */
+/* Active state: keep underline and color 
 .navbar-nav .nav-link.active {
   color: #0056b3;
   border-bottom-color: #0056b3;
 }
+*/
+
+/* =====================================================
+   NAVBAR POLISH – Pill Style
+   ===================================================== */
+
+/* Make nav links slightly larger and bolder */
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px; /* pill shape */
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Hover: soft brand-blue background with white text */
+.navbar-nav .nav-link:hover {
+  background-color: #0056b3;
+  color: #fff !important;
+}
+
+/* Active link: keep pill highlight */
+.navbar-nav .nav-link.active {
+  background-color: #004494;
+  color: #fff !important;
+}
+
 
