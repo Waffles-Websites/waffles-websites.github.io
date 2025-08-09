@@ -130,8 +130,8 @@ header img,
   border-radius: 4px;
   transition: background-color .2s ease, box-shadow .2s ease;
 }
-.btn-brand { background: #0056b3; color: #fff; }
-.btn-brand:hover { background: #004494; color: #fff; }
+/*.btn-brand { background: #0056b3; color: #fff; }
+.btn-brand:hover { background: #004494; color: #fff; }*
 
 /* =====================================================
    FOOTER
@@ -208,15 +208,15 @@ footer a:hover { text-decoration: underline; }
 /* Give both buttons a similar visual weight */
 .hero-btn { min-width: 190px; }
 
-/* Solid primary */
+/* Solid primary 
 .btn-brand {
   background: #2f5ae0; 
   color: #fff;
   border: 1px solid #2a51ca;
 }
-.btn-brand:hover { background: #264ac0; color: #fff; }
+.btn-brand:hover { background: #264ac0; color: #fff; }*/
 
-/* Ghost/outline secondary that actually looks intentional on dark hero */
+/* Ghost/outline secondary that actually looks intentional on dark hero 
 .btn-ghost {
   background: transparent;
   color: #e9ecff;
@@ -226,7 +226,7 @@ footer a:hover { text-decoration: underline; }
   background: rgba(255,255,255,.08);
   color: #fff;
   border-color: rgba(233,236,255,.85);
-}
+}*/
 
 /* Desktop: align left if you prefer (keep centered on mobile) */
 @media (min-width: 992px) {
