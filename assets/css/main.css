@@ -591,31 +591,31 @@ a:hover {
 }
 
 /* size/spacing for hero buttons */
-.hero .hero-btn{min-width:160px;padding:.65rem 1.1rem;font-weight:600}
+.hero .hero-cta .hero-btn{min-width:160px;padding:.65rem 1.1rem;font-weight:600}
 
 /* solid accent */
-.hero .btn-accent{
+.hero .hero-cta .btn-accent{
   background:var(--accent) !important;
   color:var(--accent-contrast) !important;
   border:2px solid var(--accent-border) !important;
 }
-.hero .btn-accent:hover{
+.hero .hero-cta .btn-accent:hover{
   background:var(--accent-hover) !important;
   border-color:var(--accent-hover) !important;
 }
 
 /* outline accent */
-.hero .btn-outline-accent{
+.hero .hero-cta .btn-outline-accent{
   background:transparent !important;
   color:var(--accent) !important;
   border:2px solid var(--accent-border) !important;
 }
-.hero .btn-outline-accent:hover{
+.hero .hero-cta .btn-outline-accent:hover{
   background:var(--accent) !important;
   color:var(--accent-contrast) !important;
 }
 
 /* extra spacing between the two */
-.hero .hero-cta{gap:1rem !important}
+.hero .hero-cta .hero-cta{gap:1rem !important}
 
 
