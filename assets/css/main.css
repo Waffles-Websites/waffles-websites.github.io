@@ -576,3 +576,46 @@ a:hover {
 .hero .btn-ghost{ border:2px solid var(--accent) !important; color:var(--accent) !important; }
 .hero .btn-ghost:hover{ background:var(--accent) !important; color:#fff !important; }
 
+
+
+
+
+
+/* === HERO BUTTONS: accent color + consistency === */
+:root{
+  /* Choose one palette. Orange pops on light-blue hero */
+  --accent:#ff8c00;
+  --accent-hover:#ff7a00;
+  --accent-contrast:#ffffff;
+  --accent-border:var(--accent);
+}
+
+/* size/spacing for hero buttons */
+.hero .hero-btn{min-width:160px;padding:.65rem 1.1rem;font-weight:600}
+
+/* solid accent */
+.hero .btn-accent{
+  background:var(--accent) !important;
+  color:var(--accent-contrast) !important;
+  border:2px solid var(--accent-border) !important;
+}
+.hero .btn-accent:hover{
+  background:var(--accent-hover) !important;
+  border-color:var(--accent-hover) !important;
+}
+
+/* outline accent */
+.hero .btn-outline-accent{
+  background:transparent !important;
+  color:var(--accent) !important;
+  border:2px solid var(--accent-border) !important;
+}
+.hero .btn-outline-accent:hover{
+  background:var(--accent) !important;
+  color:var(--accent-contrast) !important;
+}
+
+/* extra spacing between the two */
+.hero .hero-cta{gap:1rem !important}
+
+
