@@ -100,3 +100,28 @@ img{max-width:100%; display:block}
 /* Utility */
 .round{border-radius: var(--radius)}
 .shadow{box-shadow: var(--shadow)}
+
+/* Social Icons in Footer */
+.social-icons {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.social-icons a {
+  font-size: 1.3rem;
+  color: var(--accent);
+  background: var(--card);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-icons a:hover {
+  background: var(--brand);
+  color: #fff;
+}
