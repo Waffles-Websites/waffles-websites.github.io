@@ -113,23 +113,23 @@ nav_active: index
 </section>
 
 
-
-<section class="section section-muted">
+<section class="section">
   <div class="container">
     <div class="d-flex justify-content-between align-items-end mb-3">
       <h2 class="mb-0">Upcoming Events</h2>
-      <a class="btn btn-ghost btn-sm" href="/events/">All Events</a>
     </div>
     <div class="row g-4">
-      {% assign next_events = site.events | sort: "date" | slice: 0, 3 %}
-      {% for event in next_events %}
+      {% assign next_events = site.events | sort: "date" %}
+      {% for event in next_events limit:3 %}
       <div class="col-md-4">
         <div class="card-soft h-100">
           <div class="card-body">
             <h4>{{ event.title }}</h4>
-            <p class="text-muted">{{ event.date | date: "%B %d, %Y" }}</p>
-            <p>{{ event.description | truncate: 100 }}</p>
-            <a class="btn btn-brand btn-sm" href="{{ event.url }}">Details</a>
+            <p class="text-muted">{{ event.date | date: "%B %d, %Y @ %I:%M %p" }}</p>
+            {% if event.location %}
+            <p><strong>Location:</strong> {{ event.location }}</p>
+            {% endif %}
+            <p>{{ event.description }}</p>
           </div>
         </div>
       </div>
