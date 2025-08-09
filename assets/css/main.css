@@ -130,8 +130,8 @@ header img,
   border-radius: 4px;
   transition: background-color .2s ease, box-shadow .2s ease;
 }
-/*.btn-brand { background: #0056b3; color: #fff; }
-.btn-brand:hover { background: #004494; color: #fff; }*
+.btn-brand { background: #0056b3; color: #fff; }
+.btn-brand:hover { background: #004494; color: #fff; }
 
 /* =====================================================
    FOOTER
