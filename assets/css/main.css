@@ -416,3 +416,29 @@ footer.site-footer {
   display: inline-block;
 }
 
+
+/* =====================================================
+   NAVBAR POLISH
+   ===================================================== */
+
+/* Make nav links slightly larger and bolder */
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.25rem;
+}
+
+/* Hover state: brand blue underline and color */
+.navbar-nav .nav-link:hover {
+  color: #0056b3;
+  border-bottom-color: #0056b3;
+}
+
+/* Active state: keep underline and color */
+.navbar-nav .nav-link.active {
+  color: #0056b3;
+  border-bottom-color: #0056b3;
+}
+
