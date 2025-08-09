@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-title">{{ site.title }}</p>
+      <p>A local country church where everyone is welcome and God comes first.</p>
+    </div>
+    <div>
+      <p class="footer-title">Gathering Times</p>
+      <ul class="list">
+        <li>Sunday Service · {{ site.service_times.sunday_service }}</li>
+        <li>Sunday School · {{ site.service_times.sunday_school }}</li>
+        <li>Wednesday Bible Study · {{ site.service_times.wednesday_bible_study }}</li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-title">Visit Us</p>
+      <p>{{ site.address }}</p>
+      <p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query={{ site.address | uri_escape }}" target="_blank" rel="noopener">Open in Google Maps</a></p>
+      <p><a class="text-link" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p><a class="text-link" href="tel:{{ site.phone | replace: '(', '' | replace: ')', '' | replace: ' ', '' | replace: '-', '' }}">{{ site.phone }}</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+  </div>
+</footer>
