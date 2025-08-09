@@ -341,3 +341,36 @@ footer.site-footer {
     padding: 0.5rem 1rem;
   }
 }
+
+/* --- Brand: small logo to the left of name --- */
+.site-nav .navbar-brand.brand-combo {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;                 /* space between logo and name */
+  padding: .25rem 0;          /* tighter vertical rhythm */
+  white-space: nowrap;        /* keep logo + name on one line */
+}
+
+.site-nav .navbar-brand .nav-logo {
+  height: 28px;               /* small logo */
+  width: auto;
+  display: block;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+}
+
+@media (min-width: 992px) {
+  .site-nav .navbar-brand .nav-logo { height: 32px; }   /* slightly larger on desktop */
+}
+
+.site-nav .navbar-brand .brand-text {
+  font-weight: 700;
+  font-size: 1.05rem;         /* readable but not shouting */
+  letter-spacing: .2px;
+  color: #1f2937;             /* slate-800 */
+}
+
+.site-nav .navbar-brand:hover .brand-text {
+  color: #0f3ea1;             /* matches your brand button tone */
+}
+
