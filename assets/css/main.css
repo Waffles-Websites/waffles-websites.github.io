@@ -593,29 +593,51 @@ a:hover {
 /* size/spacing for hero buttons */
 .hero .hero-cta .hero-btn{min-width:160px;padding:.65rem 1.1rem;font-weight:600}
 
-/* solid accent */
-.hero .hero-cta .btn-accent{
-  background:var(--accent) !important;
-  color:var(--accent-contrast) !important;
-  border:2px solid var(--accent-border) !important;
-}
-.hero .hero-cta .btn-accent:hover{
-  background:var(--accent-hover) !important;
-  border-color:var(--accent-hover) !important;
+/* ===== HERO BUTTONS — Yellow Style ===== */
+:root {
+  --accent: #ffcc00;          /* bright yellow */
+  --accent-hover: #e6b800;    /* slightly darker yellow for hover */
+  --accent-contrast: #000000; /* black text for contrast */
+  --accent-border: var(--accent);
 }
 
-/* outline accent */
-.hero .hero-cta .btn-outline-accent{
-  background:transparent !important;
-  color:var(--accent) !important;
-  border:2px solid var(--accent-border) !important;
-}
-.hero .hero-cta .btn-outline-accent:hover{
-  background:var(--accent) !important;
-  color:var(--accent-contrast) !important;
+/* Consistent sizing */
+.hero .hero-cta { gap: 1rem !important; }
+.hero .hero-btn {
+  min-width: 160px;
+  padding: 0.65rem 1.2rem;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
 }
 
-/* extra spacing between the two */
-.hero .hero-cta .hero-cta{gap:1rem !important}
+/* Solid yellow button */
+.hero .btn-accent {
+  background: var(--accent) !important;
+  color: var(--accent-contrast) !important;
+  border: 2px solid var(--accent-border) !important;
+}
+.hero .btn-accent:hover {
+  background: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Outline version */
+.hero .btn-outline-accent {
+  background: transparent !important;
+  color: var(--accent) !important;
+  border: 2px solid var(--accent-border) !important;
+}
+.hero .btn-outline-accent:hover {
+  background: var(--accent) !important;
+  color: var(--accent-contrast) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
 
 
