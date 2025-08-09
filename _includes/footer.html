@@ -18,12 +18,13 @@
       <p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query={{ site.address | uri_escape }}" target="_blank" rel="noopener">Open in Google Maps</a></p>
       <p><a class="text-link" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       <p><a class="text-link" href="tel:{{ site.phone | replace: '(', '' | replace: ')', '' | replace: ' ', '' | replace: '-', '' }}">{{ site.phone }}</a></p>
-      {% if site.facebook %}
-      <p><a class="text-link" href="{{ site.facebook }}" target="_blank" rel="noopener">Facebook</a></p>
-      {% endif %}
-      {% if site.youtube %}
-      <p><a class="text-link" href="{{ site.youtube }}" target="_blank" rel="noopener">YouTube</a></p>
-      {% endif %}
+        {% if site.facebook %}
+  <p><a class="text-link" href="{{ site.facebook }}" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a></p>
+  {% endif %}
+  {% if site.youtube %}
+  <p><a class="text-link" href="{{ site.youtube }}" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> YouTube</a></p>
+  {% endif %}
+
 
     </div>
   </div>
