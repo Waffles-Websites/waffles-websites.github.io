@@ -522,3 +522,57 @@ a:hover {
 
 /* extra breathing room between buttons */
 .hero .d-flex.gap-2, .hero .hero-cta { gap: 1rem !important; }
+
+
+
+
+
+
+/* === HERO BUTTONS: accent color + consistency === */
+:root{
+  /* pick one palette */
+  /* Orange that pops on light blue */
+  --accent:#ff8c00;
+  --accent-hover:#ff7a00;
+
+  /* If you want darker blue instead, swap the two lines above for:
+  --accent:#1e3a8a;
+  --accent-hover:#173272;
+  */
+
+  --accent-contrast:#ffffff;
+  --accent-border:var(--accent);
+}
+
+.hero .hero-btn{min-width:160px;padding:.65rem 1.1rem;font-weight:600}
+
+/* solid */
+.hero .btn-accent{
+  background:var(--accent) !important;
+  color:var(--accent-contrast) !important;
+  border:2px solid var(--accent-border) !important;
+}
+.hero .btn-accent:hover{
+  background:var(--accent-hover) !important;
+  border-color:var(--accent-hover) !important;
+}
+
+/* outline */
+.hero .btn-outline-accent{
+  background:transparent !important;
+  color:var(--accent) !important;
+  border:2px solid var(--accent-border) !important;
+}
+.hero .btn-outline-accent:hover{
+  background:var(--accent) !important;
+  color:var(--accent-contrast) !important;
+}
+
+/* spacing between the two */
+.hero .hero-cta{gap:1rem !important}
+
+/* SAFETY: if the old classes are still on the elements, force them too */
+.hero .btn-brand{ background:var(--accent) !important; border-color:var(--accent) !important; color:#fff !important; }
+.hero .btn-ghost{ border:2px solid var(--accent) !important; color:var(--accent) !important; }
+.hero .btn-ghost:hover{ background:var(--accent) !important; color:#fff !important; }
+
