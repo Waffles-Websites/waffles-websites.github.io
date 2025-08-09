@@ -374,3 +374,34 @@ footer.site-footer {
   color: #0f3ea1;             /* matches your brand button tone */
 }
 
+/* --- Brand: tiny logo, larger text, centered in navbar --- */
+.site-nav .navbar {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  min-height: 64px; /* gives breathing room */
+}
+
+.site-nav .navbar-brand.brand-combo {
+  display: inline-flex;
+  align-items: center;     /* vertical centering */
+  gap: 0.5rem;
+}
+
+.site-nav .navbar-brand .nav-logo {
+  height: 20px;            /* small logo */
+  width: auto;
+  display: block;
+  object-fit: contain !important;
+}
+
+.site-nav .navbar-brand .brand-text {
+  font-weight: 700;
+  font-size: 1.5rem;       /* larger name */
+  letter-spacing: 0.3px;
+  color: #1f2937;
+}
+
+.site-nav .navbar-brand:hover .brand-text {
+  color: #0f3ea1;
+}
+
