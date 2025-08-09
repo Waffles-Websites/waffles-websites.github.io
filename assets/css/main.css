@@ -405,3 +405,14 @@ footer.site-footer {
   color: #0f3ea1;
 }
 
+/* NAV logo: force smaller height no matter what Bootstrap does */
+.site-nav .navbar-brand img,
+.site-nav .navbar-brand .nav-logo,
+.site-nav .navbar-brand img.img-fluid {
+  height: 18px !important;
+  max-height: 18px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: inline-block;
+}
+
