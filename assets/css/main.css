@@ -233,19 +233,19 @@ footer a:hover { text-decoration: underline; }
   .hero-cta { justify-content: flex-start; }
 }
 
-/* Optional: give the hero a softer look so buttons pop 
+/* Optional: give the hero a softer look so buttons pop */
 .hero {
   background: linear-gradient(135deg, #1f2a44 0%, #2f4a83 100%);
   color: #fff;
   border-bottom: 1px solid rgba(0,0,0,.06);
-}*/
+}
 
-.hero {
+/*.hero {
   background: linear-gradient(
     180deg,
     rgba(0, 92, 184, 0.9) 0%,
     rgba(0, 136, 204, 0.85) 100%
-  );
+  );*/
 
 /* ===== Footer Polish ===== */
 footer.site-footer {
