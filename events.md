@@ -1,6 +1,6 @@
 ---
 title: Events
-subtitle: What’s happening at { '{ site.title }' }
+subtitle: What’s happening at Cedar Grove
 ---
 We keep things simple but meaningful. Here are some ideas to get us started. Replace these with real dates as you’d like.
 
