@@ -17,14 +17,14 @@ h1, h2, h3, h4, h5, h6 {
         color: #ffffff;
 }
 .navbar .nav-item :hover, .nav-item :active, .nav-item :focus{
-    color: #b3e5fc;
+    color: #D9A441;
 }
 
 .nav-item-new{
   color: #ffffff;
 }
 .nav-link-new :hover, .nav-link-new :active, .nav-link-new :focus{
-  color: #b3e5fc;
+  color: #D9A441;
 }
 .navbar-brand{
     color: #ffffff;
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-brand:hover,
 .navbar-brand:focus {
-  color: #b3e5fc;
+  color: #D9A441;
   text-decoration: none;
 }
 
@@ -208,7 +208,6 @@ height: 80px;
 
 
 
-
 .site-footer{background:#2F5233; /*border-top:1px solid #f0e6de; margin-top:2rem*/ color:#ffffff}
 .footer-grid{display:grid; grid-template-columns: 2fr 1fr 1fr; gap:1rem; padding:1.5rem 0}
 .footer-title{font-weight:700; margin:0 0 .4rem}
@@ -225,6 +224,7 @@ height: 80px;
   display: flex;
   gap: 1rem;
   margin-top: 0.8rem;
+    text-decoration: none;
 }
 
 .social-icons a {
@@ -238,9 +238,20 @@ height: 80px;
   justify-content: center;
   box-shadow: var(--shadow);
   transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+
 }
 
 .social-icons a:hover {
   background: var(--brand);
   color: #fff;
+    text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-link{
+    color: #fff;
 }
