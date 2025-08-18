@@ -139,9 +139,7 @@ background-color: #c8e6c9         ;
 height: 80px;
   background: linear-gradient(to bottom, #dcedc8 0%, #fffde7 100%);
 }
-.secondThirdHero{
 
-}
 .thirdFourthHero{
 height: 80px;
   background: linear-gradient(to bottom, #fffde7 0%, #c8e6c9 100%);
@@ -211,7 +209,7 @@ height: 80px;
 
 
 
-.site-footer{background:#fbf3ea; border-top:1px solid #f0e6de; margin-top:2rem}
+.site-footer{background:#2F5233; /*border-top:1px solid #f0e6de; margin-top:2rem*/ color:#ffffff}
 .footer-grid{display:grid; grid-template-columns: 2fr 1fr 1fr; gap:1rem; padding:1.5rem 0}
 .footer-title{font-weight:700; margin:0 0 .4rem}
 .footer-bottom{border-top:1px dashed #ead8c7; padding:.8rem 0; text-align:center; color:var(--muted)}
