@@ -1,0 +1,11 @@
+title: Cedar Grove Christian
+description: A warm, inviting local church where everyone is welcome and God comes first.
+plugins:
+  - jekyll-seo-tag
+markdown: kramdown
+theme: minima
+exclude:
+  - node_modules
+  - vendor
+  - README.md
+  - package.json
