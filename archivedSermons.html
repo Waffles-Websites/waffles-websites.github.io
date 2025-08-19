@@ -4,32 +4,25 @@ title: Archived Sermons – Cedar Grove Christian Church
 description: Browse past sermons by date, passage, and speaker from Cedar Grove Christian Church.
 ---
 
-<!--Home Contact Dropdown Search bg-body-tertiary-->
+<div class="container py-5">
+  <h1 class="mb-4">Sermons</h1>
 
-
-
-<div class="bg-wrapper">
-  <div class="overlay">
-    <div class="container text-center py-5">
-      <div class="ratio ratio-16x9 mb-4 video-wrapper">
-        <iframe id="youtubePlayer"
-          src="https://www.youtube.com/embed/nd9Y3D4Hi24"
-          title="YouTube video" allowfullscreen></iframe>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-6 text-start">
-          <label for="videoSelector" class="form-label fw-bold text-light">Choose a date:</label>
-          <select id="videoSelector" class="form-select" onchange="changeVideo()">
-            <option value="nd9Y3D4Hi24">June 8, 2025</option>
-            <option value="D4cdLWiMMNs">May 18, 2025</option>
-            <option value="Q0xQiEhAhcw">May 11, 2025</option>
-            <option value="eiZO2GEiueI">May 4, 2025</option>
-            <option value="zykr7wuU7z4">April 28, 2025</option>
-             <option value="XBf_v47i7nU">April 20, 2025</option>
-             <option value="T1ml69dUoks">April 6, 2025</option>
-          </select>
+  <!-- Recent first -->
+  <div class="list-group">
+    {% assign sorted = site.sermons | sort: "date" | reverse %}
+    {% for s in sorted %}
+      <a class="list-group-item list-group-item-action py-3" href="{{ s.url | relative_url }}">
+        <div class="d-flex w-100 justify-content-between align-items-center">
+          <h2 class="h5 m-0">{{ s.title }}</h2>
+          <small class="text-muted">{{ s.date | date: "%b %-d, %Y" }}</small>
         </div>
-      </div>
-    </div>
+        <div class="text-muted small mt-1">
+          {{ s.speaker }} · {{ s.passage }}
+        </div>
+        {% if s.summary %}
+          <p class="mb-0 mt-2">{{ s.summary }}</p>
+        {% endif %}
+      </a>
+    {% endfor %}
   </div>
 </div>

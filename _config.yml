@@ -14,15 +14,25 @@ exclude:
   - README.md
   - package.json
 
-
-
   # Site data used in templates
 service_times:
   sunday_service: "9:30 AM"
   sunday_school: "10:30 AM"
   wednesday_bible_study: "6:30 PM"
+  wednesday_kids_4_truth: "6:30 PM"
 address: "5270 Chuckey Pike, Chuckey, TN 37641"
 email: "cedargrovechristiantn@gmail.com"
 phone: "423-525-7413"
+phone_e164: "+14235257413"
 facebook: "https://www.facebook.com/profile.php?id=100064446712278"
 youtube: "https://www.youtube.com/@CedarGroveChristian"
+
+collections:
+  sermons:
+    output: true
+    permalink: /sermons/:slug/
+
+# Optional: default layout for all sermons
+defaults:
+  - scope: { path: "", type: sermons }
+    values: { layout: sermon }
