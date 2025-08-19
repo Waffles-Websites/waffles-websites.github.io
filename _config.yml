@@ -5,6 +5,7 @@ logo: /assets/images/logo.png
 image: /assets/images/logo.png
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 markdown: kramdown
 theme: minima
 exclude:

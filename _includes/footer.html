@@ -6,11 +6,26 @@
     </div>
     <div>
       <p class="footer-title">Gathering Times</p>
-      <ul class="list">
-        <li>Sunday Service · {{ site.service_times.sunday_service }}</li>
-        <li>Sunday School · {{ site.service_times.sunday_school }}</li>
-        <li>Wednesday Bible Study · {{ site.service_times.wednesday_bible_study }}</li>
-      </ul>
+      {% comment %}
+Defensive footer: always prints times. If _config.yml isn't loaded
+(e.g., opened as a raw file or Jekyll not restarted), we fall back.
+{% endcomment %}
+{% assign times = site.service_times | default: {} %}
+
+<ul class="list">
+  <li>
+    Sunday Service ·
+    {{ times.sunday_service | default: "9:30 AM" }}
+  </li>
+  <li>
+    Sunday School ·
+    {{ times.sunday_school | default: "10:30 AM" }}
+  </li>
+  <li>
+    Wednesday Bible Study ·
+    {{ times.wednesday_bible_study | default: "6:30 PM" }}
+  </li>
+</ul>
     </div>
     <div>
       <p class="footer-title">Visit Us</p>

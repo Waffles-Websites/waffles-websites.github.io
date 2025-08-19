@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://waffles-websites.github.io/sitemap.xml

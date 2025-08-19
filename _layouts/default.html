@@ -19,6 +19,9 @@ layout: none
     <link rel="icon" type="image/x-icon" href="/assets/images/logo.png">
 
 {% seo %}
+{% if page.url == "/" %}
+  {% include seo-org.html %}
+{% endif %}
 </head>
 <body>
   {% include nav.html %}
