@@ -1,5 +1,8 @@
 title: Cedar Grove Christian
-description: A warm, inviting local church where everyone is welcome and God comes first.
+description: A warm, inviting Chuckey church where everyone is welcome and God comes first.
+url: https://waffles-websites.github.io
+logo: /assets/images/logo.png
+image: /assets/images/logo.png
 plugins:
   - jekyll-seo-tag
 markdown: kramdown
@@ -9,6 +12,8 @@ exclude:
   - vendor
   - README.md
   - package.json
+
+
 
   # Site data used in templates
 service_times:
