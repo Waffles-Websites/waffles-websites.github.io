@@ -318,3 +318,5 @@ a {
 
 
 
+.events-list .fw-semibold a { text-decoration: none; }
+.events-list .fw-semibold a:hover { text-decoration: underline; }

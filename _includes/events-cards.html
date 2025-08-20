@@ -1,0 +1,55 @@
+{% assign today = site.time | date: "%s" %}
+{% assign events = site.data.events | sort: "date" %}
+
+{% comment %}
+Loop through future events only (date in _data/events.yml must be YYYY-MM-DD or YYYY-MM-DD HH:MM).
+{% endcomment %}
+{% assign upcoming = "" | split: "" %}
+{% for e in events %}
+  {% assign ev_time = e.date | date: "%s" %}
+  {% if ev_time >= today %}
+    {% assign upcoming = upcoming | push: e %}
+  {% endif %}
+{% endfor %}
+
+<div class="text-center my-5">
+  <h1 class="display-5 fw-bold">Upcoming Events</h1>
+  <div class="col-lg-8 mx-auto">
+    <h4 class="mb-4">Join us for these special events and be part of our community in action.</h4>
+
+    {% if upcoming.size > 0 %}
+      <div class="card-group">
+        {% for e in upcoming %}
+          <div class="card mb-4">
+            {% if e.image %}
+              <img src="{{ e.image | relative_url }}" class="card-img-top" alt="{{ e.title }}">
+            {% endif %}
+            <div class="card-body">
+              <p class="card-text">
+                <small class="text-danger">
+                  {{ e.date | date: "%B %-d, %Y" }}{% if e.time %} • {{ e.time }}{% endif %}
+                </small>
+              </p>
+              <h5 class="card-title">{{ e.title }}</h5>
+              <p class="card-text">{{ e.description }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      {% comment %}
+      --- Fallback: show next regular service ---
+      {% endcomment %}
+      {% assign weekday = site.time | date: "%u" %} {# 1=Mon … 7=Sun #}
+      {% assign hourmin = site.time | date: "%H%M" | plus: 0 %}
+
+      {% if weekday == "3" and hourmin < 1830 %}
+        <p class="lead">Join us tonight for <strong>Wednesday Bible Study</strong> at 6:30 PM.</p>
+      {% elsif weekday < "3" or (weekday == "3" and hourmin >= 1830 and weekday < "7") %}
+        <p class="lead">Join us this Sunday for <strong>Morning Service</strong> at 9:30 AM.</p>
+      {% else %}
+        <p class="lead">Join us this Wednesday for <strong>Bible Study</strong> at 6:30 PM.</p>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>

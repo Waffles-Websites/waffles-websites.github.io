@@ -1,13 +1,27 @@
 ---
 layout: default
+title: Events
+
+---
+<div class="container py-5">
+  <h1 class="mb-4">Events</h1>
+  {% include events-pro.html layout="timeline" limit=20 header="What’s Coming Up" %}
+  <hr class="my-5">
+  <p class="small">Prefer a calendar? Subscribe to <a href="{{ '/events.ics' | relative_url }}">our .ics feed</a>.</p>
+</div>
+
+
+
+<!-----
+layout: default
 title: Church Calendar & Upcoming Events – Cedar Grove Christian
 description: See upcoming services, Bible studies, and special events at Cedar Grove Christian Church in Chuckey, TN.
 ---
 
-<!--Home Contact Dropdown Search-->
+Home Contact Dropdown Search-->
     <!--px-4 py-5 my-5-->
       
-      <div class="container col-xxl-8 px-4 py-5 ">
+  <!--    <div class="container col-xxl-8 px-4 py-5 ">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-12 col-sm-12 col-lg-12 text-center ">
             <div class="googleCalendar">
@@ -16,7 +30,7 @@ description: See upcoming services, Bible studies, and special events at Cedar G
       </div>
       </div>
       </div>
-<!--
+
       <div class=" text-center fourthHeroCalendar py-5" id="fourthHero">
         <h1 class="display-5 fw-bold">Upcoming Events</h1>
         <div class="col-lg-6 mx-auto" >
@@ -47,7 +61,7 @@ description: See upcoming services, Bible studies, and special events at Cedar G
                     <p class="card-text"><small class="text-danger">April 11-12</small></p>
                     <h5 class="card-title">Palm Sunday</h5>
                     <p class="card-text">We will have communion in the morning service. Also will be taking up offering for church addition</p>
-                  </div>-->
+                  </div>
                 </div>
               </div>
-          </div>
+          </div>-->
