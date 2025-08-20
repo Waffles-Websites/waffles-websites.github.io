@@ -18,20 +18,20 @@
     <link rel="icon" type="image/x-icon" href="/assets/images/logo.png">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Livestream | Cedar Grove Christian</title>
+<title>Prayer Request | Cedar Grove Christian</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Livestream" />
+<meta property="og:title" content="Prayer Request" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A warm, inviting Chuckey church where everyone is welcome and God comes first." />
 <meta property="og:description" content="A warm, inviting Chuckey church where everyone is welcome and God comes first." />
-<link rel="canonical" href="http://localhost:4000/livestream/" />
-<meta property="og:url" content="http://localhost:4000/livestream/" />
+<link rel="canonical" href="http://localhost:4000/prayer/" />
+<meta property="og:url" content="http://localhost:4000/prayer/" />
 <meta property="og:site_name" content="Cedar Grove Christian" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Livestream" />
+<meta property="twitter:title" content="Prayer Request" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"A warm, inviting Chuckey church where everyone is welcome and God comes first.","headline":"Livestream","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"url":"http://localhost:4000/livestream/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"A warm, inviting Chuckey church where everyone is welcome and God comes first.","headline":"Prayer Request","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"url":"http://localhost:4000/prayer/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -84,141 +84,95 @@
       </nav>
   <div class="container py-5">
   <div class="text-center mb-4">
-    <h1 class="display-5 fw-bold">Livestream</h1>
-    <p class="lead mb-0">If we’re live, it will play here. Otherwise you’ll see a link to recent sermons.</p>
+    <h1 class="display-5 fw-bold">Prayer Request</h1>
+    <p class="lead mb-0">Let us know how we can pray for you. Your request goes directly to our pastor.</p>
   </div>
 
-  <!-- Player starts hidden; we only reveal it on confirmed live -->
-  <div class="livestream-wrap">
-    <div id="playerContainer" class="livestream-player is-hidden" aria-hidden="true">
-      <div id="yt-live-player"></div>
+  <form id="prayerForm" class="mx-auto" style="max-width:720px;">
+    <!-- Honeypot (anti-spam) -->
+    <div style="position:absolute; left:-9999px; top:auto;">
+      <label>Leave this empty <input type="text" name="honeypot" tabindex="-1" autocomplete="off"></label>
     </div>
-  </div>
 
-  <!-- Fallback shown by default -->
-  <div id="notLive" class="text-center mt-4">
-    <p class="lead mb-3">We are not live at the moment.</p>
-    <a class="btn btn-outline-secondary" href="/archivedSermons/">
-      View previous sermons
-    </a>
-  </div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label">Name (optional)</label>
+        <input type="text" class="form-control" name="name" autocomplete="name">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Email (optional)</label>
+        <input type="email" class="form-control" name="email" autocomplete="email">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Phone (optional)</label>
+        <input type="tel" class="form-control" name="phone" autocomplete="tel">
+      </div>
+      <div class="col-12">
+        <label class="form-label">Your Prayer Request *</label>
+        <textarea class="form-control" name="request" rows="5" required
+          placeholder="Share as much or as little as you’d like."></textarea>
+      </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="sharePublicly" id="sharePublicly">
+          <label class="form-check-label" for="sharePublicly">
+            You may share this with the congregation (e.g., bulletin or prayer list).
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="contactRequested" id="contactRequested">
+          <label class="form-check-label" for="contactRequested">
+            Please have someone follow up with me.
+          </label>
+        </div>
+      </div>
+
+      <div class="col-12 d-grid d-sm-flex gap-2">
+        <button type="submit" class="btn btn-primary" id="submitBtn">Send Request</button>
+        <button type="reset" class="btn btn-outline-secondary">Clear</button>
+      </div>
+    </div>
+
+    <!-- Status messages -->
+    <div id="formAlert" class="alert mt-4 d-none" role="alert"></div>
+  </form>
 </div>
 
-<style>
-.livestream-wrap{display:flex;justify-content:center}
-.livestream-player{width:min(100%,960px);aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.15)}
-.livestream-player iframe{width:100%;height:100%;border:0}
-.is-hidden{display:none !important}
-</style>
-
-<!-- YouTube IFrame API -->
-<script src="https://www.youtube.com/iframe_api"></script>
 <script>
-/* global YT */
 (function(){
-  var channelId = "UCdbE14mcESiZoj0wlNXG4bw";
-  if (!channelId || typeof channelId !== 'string' || channelId.slice(0,2) !== 'UC') {
-    console.error('Missing/invalid YouTube channel_id.');
+  // Your live Apps Script endpoint:
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxSF0t5SqS0sxN9OdJ-KEcghCfSrfFycA4Mpg2eGdwwKiN-1RhioPvFhwxeXfrtAXWD/exec';
+
+  const form = document.getElementById('prayerForm');
+  const alertBox = document.getElementById('formAlert');
+  const submitBtn = document.getElementById('submitBtn');
+
+  function showAlert(type, msg){
+    alertBox.className = 'alert mt-4 alert-' + type; // success | danger | warning
+    alertBox.textContent = msg;
+    alertBox.classList.remove('d-none');
   }
 
-  var POLL_MS = 30000;     // check every 30s
-  var START_GRACE_MS = 4000; // give live a moment to start
-  var player = null, pollTimer = null, startTimer = null, liveShown = false;
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    alertBox.classList.add('d-none');
+    submitBtn.disabled = true;
 
-  var playerContainer = document.getElementById('playerContainer');
-  var notLive = document.getElementById('notLive');
-
-  function showPlayer(){
-    if (playerContainer){ playerContainer.classList.remove('is-hidden'); playerContainer.setAttribute('aria-hidden','false'); }
-    if (notLive){ notLive.classList.add('is-hidden'); }
-  }
-  function showFallback(){
-    if (playerContainer){ playerContainer.classList.add('is-hidden'); playerContainer.setAttribute('aria-hidden','true'); }
-    if (notLive){ notLive.classList.remove('is-hidden'); }
-  }
-  function clearTimers(){
-    if (pollTimer){ clearInterval(pollTimer); pollTimer = null; }
-    if (startTimer){ clearTimeout(startTimer); startTimer = null; }
-  }
-  function safeState(){
-    try { return player.getPlayerState(); } catch(e){ return -1; }
-  }
-
-  window.onYouTubeIframeAPIReady = function(){
-    player = new YT.Player('yt-live-player', {
-      width: '100%',
-      height: '100%',
-      playerVars: { autoplay: 1, rel: 0, modestbranding: 1 },
-      events: { onReady: tryLiveOnce, onStateChange: onStateChange, onError: onError }
-    });
-  };
-
-  function tryLiveOnce(){
-    liveShown = false;
-    showFallback();     // keep fallback visible until confirmed live
-    clearTimers();
+    const data = new FormData(form);
 
     try {
-      player.loadVideoById('live_stream'); // official target for current live
-    } catch(e){
-      startPolling();
-      return;
+      // no-cors keeps this simple for static sites; submission still reaches Apps Script
+      await fetch(SCRIPT_URL, { method: 'POST', body: data, mode: 'no-cors' });
+      form.reset();
+      showAlert('success', 'Thank you! Your prayer request has been received.');
+    } catch (err) {
+      console.error(err);
+      showAlert('danger', 'Sorry—something went wrong sending your request. Please try again later.');
+    } finally {
+      submitBtn.disabled = false;
     }
-
-    startTimer = setTimeout(function(){
-      var s = safeState();
-      // only show if actually playing/buffering
-      if (s === 1 || s === 3){
-        liveShown = true;
-        showPlayer();
-        clearTimers();
-      } else {
-        showFallback();
-        startPolling();
-      }
-    }, START_GRACE_MS);
-  }
-
-  function onStateChange(evt){
-    var s = evt && typeof evt.data === 'number' ? evt.data : -1;
-    if ((s === 1 || s === 3) && !liveShown){
-      liveShown = true;
-      showPlayer();
-      clearTimers(); // stop polling while live
-    }
-    if (s === 0 && !liveShown){
-      // ended right away while probing → fallback
-      showFallback();
-      startPolling();
-    }
-  }
-
-  function onError(){
-    if (!liveShown){
-      showFallback();
-      startPolling();
-    }
-  }
-
-  function startPolling(){
-    clearTimers();
-    showFallback();
-    pollTimer = setInterval(function(){
-      try {
-        player.loadVideoById('live_stream');
-      } catch(e){ /* try again next tick */ }
-      startTimer = setTimeout(function(){
-        var s = safeState();
-        if (s === 1 || s === 3){
-          liveShown = true;
-          showPlayer();
-          clearTimers();
-        } else {
-          showFallback();
-        }
-      }, START_GRACE_MS);
-    }, POLL_MS);
-  }
+  });
 })();
 </script>
 
