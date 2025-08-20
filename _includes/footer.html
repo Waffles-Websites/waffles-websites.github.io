@@ -15,7 +15,7 @@ Defensive footer: always prints times. If _config.yml isn't loaded
 <ul class="list">
   <li>
     Sunday Service ·
-    {{ times.sunday_service | default: "9:30 AM" }}
+    {{ times.main_service | default: "9:30 AM" }}
   </li>
   <li>
     Sunday School ·
@@ -23,7 +23,7 @@ Defensive footer: always prints times. If _config.yml isn't loaded
   </li>
   <li>
     Wednesday Bible Study ·
-    {{ times.wednesday_bible_study | default: "6:30 PM" }}
+    {{ times.study_wednesday | default: "6:30 PM" }}
   </li>
 </ul>
     </div>

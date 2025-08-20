@@ -16,13 +16,14 @@ exclude:
 
   # Site data used in templates
 service_times:
-#  sunday_service: "2025-08-17 9:30"
+  main_service: "9:30 AM"
   sunday_school: "10:30 AM"
-  wednesday_bible_study: "2025-08-20 18:30"
+  wednesday_bible_study: "2025-09-21 18:30"
 #  wednesday_study: "2025-08-20 18:30"
   sunday_service: "2025-01-05 09:30"
   wednesday_study: "2025-01-01 18:30"
   wednesday_kids_4_truth: "6:30 PM"
+  study_wednesday: "6:30 PM"
 address: "5270 Chuckey Pike, Chuckey, TN 37641"
 email: "cedargrovechristiantn@gmail.com"
 phone: "423-525-7413"
