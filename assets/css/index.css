@@ -156,7 +156,7 @@ height: 80px;
 .thirdFourthHero{
 height: 80px;
   background: linear-gradient(to bottom, #c8e6c9 0%, #fffde7 100%);
-}*
+}
 .card-text a{
 
    color: inherit;        /* Makes link text use the surrounding text color */
@@ -316,7 +316,29 @@ a {
 }
 
 
+.card-img-top {
+  height: 205px;          /* pick a height that looks good */
+  object-fit:contain;      /* crops and fills the box */
+  width: 100%;            /* full card width */
+}
+
+.card {
+  max-width: 320px;
+}
+.card-group {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* spacing between cards */
+}
 
 
-.events-list .fw-semibold a { text-decoration: none; }
-.events-list .fw-semibold a:hover { text-decoration: underline; }
+.eventh4{
+   font-size: 1.2em;
+   font-weight: bold;
+}
+
+.eventsSection{
+  background-color: #c8e6c9         ;
+     color: #2e7d32     ;
+}

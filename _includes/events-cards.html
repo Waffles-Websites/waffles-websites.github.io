@@ -1,55 +1,63 @@
-{% assign today = site.time | date: "%s" %}
-{% assign events = site.data.events | sort: "date" %}
+<div class="text-center  p-5 rounded" 
+     style="background-color:#c8e6c9; color:#2e7d32;" 
+     id="eventsSection">
 
-{% comment %}
-Loop through future events only (date in _data/events.yml must be YYYY-MM-DD or YYYY-MM-DD HH:MM).
-{% endcomment %}
-{% assign upcoming = "" | split: "" %}
-{% for e in events %}
-  {% assign ev_time = e.date | date: "%s" %}
-  {% if ev_time >= today %}
-    {% assign upcoming = upcoming | push: e %}
-  {% endif %}
-{% endfor %}
-
-<div class="text-center my-5">
+  <!-- Upcoming Events -->
   <h1 class="display-5 fw-bold">Upcoming Events</h1>
-  <div class="col-lg-8 mx-auto">
-    <h4 class="mb-4">Join us for these special events and be part of our community in action.</h4>
+  <h4 class="mb-4">Join us for these special events and be part of our community in action.</h4>
 
-    {% if upcoming.size > 0 %}
-      <div class="card-group">
-        {% for e in upcoming %}
-          <div class="card mb-4">
-            {% if e.image %}
-              <img src="{{ e.image | relative_url }}" class="card-img-top" alt="{{ e.title }}">
-            {% endif %}
-            <div class="card-body">
-              <p class="card-text">
-                <small class="text-danger">
-                  {{ e.date | date: "%B %-d, %Y" }}{% if e.time %} • {{ e.time }}{% endif %}
-                </small>
-              </p>
-              <h5 class="card-title">{{ e.title }}</h5>
-              <p class="card-text">{{ e.description }}</p>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
+  <!-- Dynamic service fallback -->
+  <div class="mb-5">
+    {% assign today_wday = "now" | date: "%u" %} {%- comment -%} 1=Mon … 7=Sun {%- endcomment -%}
+
+    {% if today_wday == "3" %}
+     
+      <p class="lead "><span class="eventh4">Join us Today!</span>📖 Wednesday Bible Study &amp; Kids 4 Truth  — 6:30 PM</p>
+    {% elsif today_wday == "7" %}
+      <p class="lead "><span class="eventh4">Join us Today!</span>✨ Sunday Worship — 9:30 AM · Sunday School — 10:30 AM</p>
     {% else %}
-      {% comment %}
-      --- Fallback: show next regular service ---
-      {% endcomment %}
-      {% assign weekday = site.time | date: "%u" %} {# 1=Mon … 7=Sun #}
-      {% assign hourmin = site.time | date: "%H%M" | plus: 0 %}
-
-      {% if weekday == "3" and hourmin < 1830 %}
-        <p class="lead">Join us tonight for <strong>Wednesday Bible Study</strong> at 6:30 PM.</p>
-      {% elsif weekday < "3" or (weekday == "3" and hourmin >= 1830 and weekday < "7") %}
-        <p class="lead">Join us this Sunday for <strong>Morning Service</strong> at 9:30 AM.</p>
-      {% else %}
-        <p class="lead">Join us this Wednesday for <strong>Bible Study</strong> at 6:30 PM.</p>
+      {% if today_wday < 3 %}
+        <h4 class="fw-bold mb-2">Join us Wednesday!</h4>
+        <p class="lead mb-0">📖 Bible Study — 6:30 PM</p>
+      {% elsif today_wday < 7 %}
+        <h4 class="fw-bold mb-2">Join us Sunday!</h4>
+        <p class="lead mb-0">✨ Worship — 9:30 AM · Sunday School — 10:30 AM</p>
       {% endif %}
     {% endif %}
   </div>
+
+  <!-- Upcoming Events Grid -->
+  {% assign now_ts = "now" | date: "%s" %}
+  {% assign future_events = "" | split: "" %}
+  {%- for event in site.data.events -%}
+    {% assign event_ts = event.date | date: "%s" %}
+    {% if event_ts >= now_ts %}
+      {% assign future_events = future_events | push: event %}
+    {% endif %}
+  {%- endfor -%}
+  {% assign upcoming = future_events | sort: "date" %}
+
+  {% if upcoming.size > 0 %}
+    <div class="d-flex flex-wrap justify-content-center gap-4">
+      {% for event in upcoming %}
+        <div class="card shadow-sm" style="max-width: 320px; color:#2e7d32;">
+          {% if event.image %}
+            <img src="{{ event.image | relative_url }}" 
+                 class="card-img-top event-img" 
+                 alt="{{ event.title }}" 
+                 style="object-fit:cover; height:200px;">
+          {% endif %}
+          <div class="card-body text-center">
+            <p class="card-text text-danger">
+              <small>{{ event.date | date: "%B %e, %Y · %l:%M %p" }}</small>
+            </p>
+            <h5 class="card-title">{{ event.title }}</h5>
+            <p class="card-text">{{ event.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="mt-4 fw-bold">No special events scheduled right now — but we’d love to see you at our regular services above!</p>
+  {% endif %}
 </div>
