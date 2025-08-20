@@ -342,3 +342,14 @@ a {
   background-color: #c8e6c9         ;
      color: #2e7d32     ;
 }
+
+
+h4 .icon-gold {
+  color: #2e7d32 !important;
+}
+
+#sermonLink{
+text-decoration: none;
+  color: #D9A441; 
+
+}

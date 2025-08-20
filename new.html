@@ -2,6 +2,8 @@
 layout: default
 title: Plan Your Visit – Cedar Grove Christian (Chuckey, TN)
 description: New here? What to expect on Sunday, service length, kids & nursery info, and where to park at Cedar Grove Christian Church.
+styles:
+  - /assets/css/new.css
 ---
 
 
@@ -9,7 +11,7 @@ description: New here? What to expect on Sunday, service length, kids & nursery 
  <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <img src="imgs/newImg1.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            <img src="/assets/images/newImg1.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
           </div>
           <div class="col-lg-6">
             <h1 class="display-5 fw-bold lh-1 mb-3">Welcome to Cedar Grove Christian Church!</h1>
@@ -17,7 +19,7 @@ description: New here? What to expect on Sunday, service length, kids & nursery 
 
              
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <a href="contact.html"><button type="button" class="btn btn-outline-nature btn-lg px-4 me-md-2">Connect With Us</button></a>
+              <a href="/contact/"><button type="button" class="btn btn-outline-nature-reverse btn-lg px-4 me-md-2">Connect With Us</button></a>
 
             </div>
           </div>
@@ -30,43 +32,7 @@ description: New here? What to expect on Sunday, service length, kids & nursery 
 
 <div class="secondHero">
  <div class=" text-center py-4" id="thirdHero">
-        <h1 class="display-6 fw-bold">Join Us in Worship</h1>
-        <div class="col-lg-6 mx-auto" >
-          <!--<h4 class=" mb-4">We offer multiple services throughout the week to accommodate different schedules and worship preferences.</h4>-->
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <div class="card-group">
-                <div class="card">
-                  <!--<img src="..." class="card-img-top" alt="...">-->
-                  <div class="card-body">
-                    <h4><i class="bi bi-calendar text-primary"></i></h4>
-                    <h5 class="card-title fw-bold">Sunday Services</h5>
-                    <ul class="list-group list-group-flush text-left">
-                      <li class="list-group-item"><i class="bi bi-clock text-danger"></i> 09:30AM Sunday Morning Worship</li>
-                      <li class="list-group-item"><i class="bi bi-clock text-danger"></i> 10:30AM Sunday School</li>  
-                    </ul>
-                  </div>
-                </div>
-                <div class="card">
-                  <!--<img src="..." class="card-img-top" alt="...">-->
-                  <div class="card-body">
-                    <h4><i class="bi bi-geo-alt-fill text-primary"></i></h4>
-                    <h5 class="card-title fw-bold">Location</h5>
-                    <p class="card-text "><a href="https://www.google.com/maps?q=5270 Chuckey Pike, Chuckey, TN 37641" target="_blank">5270 Chuckey Pike <br>Chuckey, TN 37641</a></p>
-                  </div>
-                </div>
-                <div class="card">
-                  <!--<img src="..." class="card-img-top" alt="...">-->
-                  <div class="card-body">
-                    <h4><i class="bi bi-people-fill text-primary"></i></h4>
-                    <h5 class="card-title fw-bold">Weekday Activities</h5>
-                    <ul class="list-group list-group-flush text-left">
-                        <li class="list-group-item"><i class="bi bi-clock text-danger"></i> Wed 6:30PM Wednesday Evening Worship</li>
-                      </ul>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
+       {% include worship.html %}
       </div>
 </div>
 
@@ -91,13 +57,13 @@ description: New here? What to expect on Sunday, service length, kids & nursery 
             <p class="lead"></p>
              
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <a href="about.html"><button type="button" class="btn btn-outline-nature btn-lg px-4 me-md-2">Learn More</button></a>
-              <a href="about.html"><button type="button" class="btn btn-outline-nature btn-lg px-4 me-md-2">What do we believe?</button></a>
+              <a href="/about/"><button type="button" class="btn btn-outline-nature-reverse btn-lg px-4 me-md-2">Learn More</button></a>
+              <a href="/about/"><button type="button" class="btn btn-outline-nature-reverse btn-lg px-4 me-md-2">What do we believe?</button></a>
 
             </div>
           </div>
           <div class="col-10 col-sm-8 col-lg-6">
-            <img src="imgs/church.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            <img src="/assets/images/church.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
           </div>
         </div>
       </div>
@@ -115,42 +81,7 @@ description: New here? What to expect on Sunday, service length, kids & nursery 
 
 <div class="fourthHero">
        <div class=" text-center py-4" id="thirdHero">
-        <h1 class="display-6 fw-bold">Join Us in Worship</h1>
-        <div class="col-lg-6 mx-auto" >
-          <!--<h4 class=" mb-4">We offer multiple services throughout the week to accommodate different schedules and worship preferences.</h4>-->
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <div class="card-group">
-                <div class="card">
-                  <!--<img src="..." class="card-img-top" alt="...">-->
-                  <div class="card-body">
-                    <h4><i class="bi bi-calendar text-primary"></i></h4>
-                    <h5 class="card-title fw-bold">Sunday Services</h5>
-                    <ul class="list-group list-group-flush text-left">
-                      <li class="list-group-item"><i class="bi bi-clock text-danger"></i> 09:30AM Sunday Morning Worship</li>
-                      <li class="list-group-item"><i class="bi bi-clock text-danger"></i> 10:30AM Sunday School</li>  
-                    </ul>
-                  </div>
-                </div>
-                <div class="card">
-                  <!--<img src="..." class="card-img-top" alt="...">-->
-                  <div class="card-body">
-                    <h4><i class="bi bi-geo-alt-fill text-primary"></i></h4>
-                    <h5 class="card-title fw-bold">Location</h5>
-                    <p class="card-text "><a href="https://www.google.com/maps?q=5270 Chuckey Pike, Chuckey, TN 37641" target="_blank">5270 Chuckey Pike <br>Chuckey, TN 37641</a></p>
-                  </div>
-                </div>
-                <div class="card">
-                  <!--<img src="..." class="card-img-top" alt="...">-->
-                  <div class="card-body">
-                    <h4><i class="bi bi-people-fill text-primary"></i></h4>
-                    <h5 class="card-title fw-bold">Weekday Activities</h5>
-                    <ul class="list-group list-group-flush text-left">
-                        <li class="list-group-item"><i class="bi bi-clock text-danger"></i> Wed 6:30PM Wednesday Evening Worship</li>
-                      </ul>
-                  </div>
-                </div>
-              </div>
-          </div>
+     {% include worship.html %}
         </div>
       </div>
 </div>

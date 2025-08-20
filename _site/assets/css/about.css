@@ -53,9 +53,9 @@ height: 80px;
 }
 
 .btn-outline-nature-reverse {
-    color: #2e7d32 !important;
+    color: #D9A441 !important;
     background-color: transparent !important;
-    border: 2px solid #2e7d32 !important;
+    border: 2px solid #D9A441 !important;
     border-radius: 0.5rem;
      transition: all 0.3s ease;
 }
@@ -67,7 +67,8 @@ height: 80px;
  
 
      color: #ffffff !important;
-  background-color: #2e7d32 !important;
-  border-color: #2e7d32 !important;
+  background-color: #D9A441 !important;
+  border-color: #D9A441 !important;
    transition: all 0.3s ease;
 }
+
