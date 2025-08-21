@@ -8,7 +8,8 @@
 
   <!-- Dynamic service fallback -->
   <div class="mb-5">
-    {% assign today_wday = "now" | date: "%u" %} {%- comment -%} 1=Mon … 7=Sun {%- endcomment -%}
+    <!--{% assign today_wday = "now" | date: "%u" %} {%- comment -%} 1=Mon … 7=Sun {%- endcomment -%}-->
+    {% assign today_wday = "now" | date: "%u" | plus: 0 %}
 
     {% if today_wday == "3" %}
      
