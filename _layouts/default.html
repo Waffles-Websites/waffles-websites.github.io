@@ -21,6 +21,12 @@ layout: none
     <link rel="stylesheet" href="{{ style | relative_url }}">
   {% endfor %}
 {% endif %}
+{% if page.scripts %}
+  {% for script in page.scripts %}
+    <script src="{{ script | relative_url }}"></script>
+  {% endfor %}
+{% endif %}
+
     <!--<title>Cedar Grove Christian - Home</title>-->
     <link rel="icon" type="image/x-icon" href="/assets/images/logo.png">
 
