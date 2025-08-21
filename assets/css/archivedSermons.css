@@ -18,3 +18,15 @@
 .form-label {
   color: #f3f3f3;
 }
+
+/* “Watch Now” tiny text button */
+.sermon-item { position: relative; }
+.watch-now {
+  font-size: 0.875rem;          /* small */
+  font-weight: 600;
+  color: var(--bs-primary);      /* matches your theme */
+  text-decoration: none;
+}
+.list-group-item:hover .watch-now {
+  text-decoration: underline;
+}
