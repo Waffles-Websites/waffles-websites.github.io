@@ -29,7 +29,7 @@
 <loc>http://localhost:4000/livestream/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/new.html</loc>
+<loc>http://localhost:4000/new/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/prayer/</loc>

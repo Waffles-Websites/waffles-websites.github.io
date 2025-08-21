@@ -353,3 +353,28 @@ text-decoration: none;
   color: #D9A441; 
 
 }
+
+/* Make the hamburger lines gold via the official var */
+.navbar {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(217,164,65)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22' /%3e%3c/svg%3e");
+}
+
+/* Default: gold border, no glow */
+.navbar .navbar-toggler {
+  border-color: #D9A441;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Kill Bootstrap's black outline */
+.navbar .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* When expanded (open) — darker gold + glow */
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: #B8860B; /* darker gold */
+  box-shadow: 0 0 0 0.15rem rgba(184, 134, 11, 0.6);
+}
+
