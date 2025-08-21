@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://waffles-websites.github.io/sitemap.xml
+Sitemap: https://cedargrovechristian.com/sitemap.xml
